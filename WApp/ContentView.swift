@@ -7,12 +7,12 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            background
+            AppColor.background
                 .ignoresSafeArea()
             VStack {
                 infoBlock
                     .frame(width: 320, height: 90)
-                    .background(Color(red: 36 / 255, green: 34 / 255, blue: 49 / 255, opacity: 1.0))
+                    .background(AppColor.primary)
                     .cornerRadius(12)
                     .padding(.bottom, 20)
                 map
@@ -22,7 +22,7 @@ struct ContentView: View {
                 locationButton
                     .cornerRadius(12)
                     .padding()
-                    .tint(Color(red: 36 / 255, green: 34 / 255, blue: 49 / 255, opacity: 1.0))
+                    .tint(AppColor.background)
                     .foregroundColor(.white)
             }
         }
@@ -35,7 +35,7 @@ struct ContentView: View {
     }
 
     private var map: some View {
-        Map(coordinateRegion: $mapViewModel.userLocationRegion, showsUserLocation: true)
+        Map(coordinateRegion: $mapViewModel.userLocationRegion)
     }
 
     private var infoBlock: some View {
@@ -50,10 +50,6 @@ struct ContentView: View {
                 .padding(.trailing, 32)
                 .font(.title)
         }
-    }
-
-    private var background: some View {
-        Color(red: 28 / 255, green: 28 / 255, blue: 35 / 255, opacity: 1.0)
     }
 }
 

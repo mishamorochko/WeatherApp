@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7407AD0027D9253B009D4D38 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407ACFF27D9253B009D4D38 /* MapViewModel.swift */; };
+		7407AD0227D92AA3009D4D38 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407AD0127D92AA3009D4D38 /* AppColor.swift */; };
 		74906AE827D38822003A8213 /* WAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74906AE727D38822003A8213 /* WAppApp.swift */; };
 		74906AEA27D38822003A8213 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74906AE927D38822003A8213 /* ContentView.swift */; };
 		74906AEC27D38822003A8213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74906AEB27D38822003A8213 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		7407ACFF27D9253B009D4D38 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		7407AD0127D92AA3009D4D38 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		74906AE427D38822003A8213 /* WApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74906AE727D38822003A8213 /* WAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAppApp.swift; sourceTree = "<group>"; };
 		74906AE927D38822003A8213 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				7407ACFF27D9253B009D4D38 /* MapViewModel.swift */,
 				74906AEB27D38822003A8213 /* Assets.xcassets */,
 				74906AED27D38822003A8213 /* Preview Content */,
+				7407AD0127D92AA3009D4D38 /* AppColor.swift */,
 			);
 			path = WApp;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74906AEA27D38822003A8213 /* ContentView.swift in Sources */,
+				7407AD0227D92AA3009D4D38 /* AppColor.swift in Sources */,
 				74906AE827D38822003A8213 /* WAppApp.swift in Sources */,
 				7407AD0027D9253B009D4D38 /* MapViewModel.swift in Sources */,
 			);

@@ -7,8 +7,8 @@ final class MapViewModel: NSObject, ObservableObject {
     // MARK: Published
 
     @Published var userLocationRegion = MKCoordinateRegion()
-    @Published var cityName = "London"
-    @Published var localTemperature = "2°C"
+    @Published var cityName = "San Jose"
+    @Published var localTemperature = "16°C"
 
     // MARK: Private
 
