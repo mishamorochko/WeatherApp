@@ -1,17 +1,9 @@
+import CoreLocationUI
 import MapKit
 import SwiftUI
 
 struct ContentView: View {
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(
-            latitude: 51.507222,
-            longitude: -0.1275
-        ),
-        span: MKCoordinateSpan(
-            latitudeDelta: 0.5,
-            longitudeDelta: 0.5
-        )
-    )
+    @StateObject private var mapViewModel = MapViewModel()
 
     var body: some View {
         ZStack {
@@ -22,22 +14,38 @@ struct ContentView: View {
                     .frame(width: 320, height: 90)
                     .background(Color(red: 36 / 255, green: 34 / 255, blue: 49 / 255, opacity: 1.0))
                     .cornerRadius(12)
-                    .padding(.bottom, 50)
-                Map(coordinateRegion: $region)
-                    .frame(width: 320, height: 450)
+                    .padding(.bottom, 20)
+                map
+                    .disabled(true)
+                    .frame(width: 320, height: 500)
                     .cornerRadius(12)
+                locationButton
+                    .cornerRadius(12)
+                    .padding()
+                    .tint(Color(red: 36 / 255, green: 34 / 255, blue: 49 / 255, opacity: 1.0))
+                    .foregroundColor(.white)
             }
         }
     }
 
+    private var locationButton: some View {
+        LocationButton {
+            mapViewModel.requestLocation()
+        }
+    }
+
+    private var map: some View {
+        Map(coordinateRegion: $mapViewModel.userLocationRegion, showsUserLocation: true)
+    }
+
     private var infoBlock: some View {
         HStack(spacing: 20) {
-            Text("London")
+            Text(mapViewModel.cityName)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 32)
                 .font(.title)
-            Text("7°C")
+            Text(mapViewModel.localTemperature)
                 .foregroundColor(.white)
                 .padding(.trailing, 32)
                 .font(.title)
