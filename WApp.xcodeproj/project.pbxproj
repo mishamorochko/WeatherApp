@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		7407AD0027D9253B009D4D38 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407ACFF27D9253B009D4D38 /* MapViewModel.swift */; };
 		7407AD0227D92AA3009D4D38 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407AD0127D92AA3009D4D38 /* AppColor.swift */; };
+		7407AD0427D92CF1009D4D38 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407AD0327D92CF1009D4D38 /* NetworkManager.swift */; };
+		748C72BC27D940080052C5E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C72BB27D940080052C5E3 /* Constants.swift */; };
+		748C72BE27D945780052C5E3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C72BD27D945780052C5E3 /* Weather.swift */; };
+		748C72C027D945AD0052C5E3 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C72BF27D945AD0052C5E3 /* Units.swift */; };
 		74906AE827D38822003A8213 /* WAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74906AE727D38822003A8213 /* WAppApp.swift */; };
-		74906AEA27D38822003A8213 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74906AE927D38822003A8213 /* ContentView.swift */; };
+		74906AEA27D38822003A8213 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74906AE927D38822003A8213 /* MapView.swift */; };
 		74906AEC27D38822003A8213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74906AEB27D38822003A8213 /* Assets.xcassets */; };
 		74906AEF27D38822003A8213 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74906AEE27D38822003A8213 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,9 +22,13 @@
 /* Begin PBXFileReference section */
 		7407ACFF27D9253B009D4D38 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		7407AD0127D92AA3009D4D38 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		7407AD0327D92CF1009D4D38 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		748C72BB27D940080052C5E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		748C72BD27D945780052C5E3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		748C72BF27D945AD0052C5E3 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		74906AE427D38822003A8213 /* WApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74906AE727D38822003A8213 /* WAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAppApp.swift; sourceTree = "<group>"; };
-		74906AE927D38822003A8213 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74906AE927D38822003A8213 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		74906AEB27D38822003A8213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74906AEE27D38822003A8213 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +44,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		748C72C127D947610052C5E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				748C72BD27D945780052C5E3 /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		748C72C227D947860052C5E3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7407AD0327D92CF1009D4D38 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		748C72C327D947960052C5E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				748C72C527D947A40052C5E3 /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		748C72C427D9479E0052C5E3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				74906AE927D38822003A8213 /* MapView.swift */,
+				7407ACFF27D9253B009D4D38 /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		748C72C527D947A40052C5E3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				748C72C427D9479E0052C5E3 /* Map */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		748C72C627D948490052C5E3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7407AD0127D92AA3009D4D38 /* AppColor.swift */,
+				748C72BB27D940080052C5E3 /* Constants.swift */,
+				748C72BF27D945AD0052C5E3 /* Units.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		74906ADB27D38822003A8213 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +115,12 @@
 			isa = PBXGroup;
 			children = (
 				74906AE727D38822003A8213 /* WAppApp.swift */,
-				74906AE927D38822003A8213 /* ContentView.swift */,
-				7407ACFF27D9253B009D4D38 /* MapViewModel.swift */,
+				748C72C627D948490052C5E3 /* Utils */,
+				748C72C327D947960052C5E3 /* Presentation */,
+				748C72C227D947860052C5E3 /* Managers */,
+				748C72C127D947610052C5E3 /* Model */,
 				74906AEB27D38822003A8213 /* Assets.xcassets */,
 				74906AED27D38822003A8213 /* Preview Content */,
-				7407AD0127D92AA3009D4D38 /* AppColor.swift */,
 			);
 			path = WApp;
 			sourceTree = "<group>";
@@ -143,10 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74906AEA27D38822003A8213 /* ContentView.swift in Sources */,
+				74906AEA27D38822003A8213 /* MapView.swift in Sources */,
+				748C72C027D945AD0052C5E3 /* Units.swift in Sources */,
 				7407AD0227D92AA3009D4D38 /* AppColor.swift in Sources */,
+				7407AD0427D92CF1009D4D38 /* NetworkManager.swift in Sources */,
 				74906AE827D38822003A8213 /* WAppApp.swift in Sources */,
 				7407AD0027D9253B009D4D38 /* MapViewModel.swift in Sources */,
+				748C72BC27D940080052C5E3 /* Constants.swift in Sources */,
+				748C72BE27D945780052C5E3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

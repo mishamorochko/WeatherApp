@@ -2,7 +2,7 @@ import CoreLocationUI
 import MapKit
 import SwiftUI
 
-struct ContentView: View {
+struct MapView: View {
     @StateObject private var mapViewModel = MapViewModel()
 
     var body: some View {
@@ -31,6 +31,7 @@ struct ContentView: View {
     private var locationButton: some View {
         LocationButton {
             mapViewModel.requestLocation()
+            mapViewModel.fetchWeather()
         }
     }
 
@@ -43,18 +44,18 @@ struct ContentView: View {
             Text(mapViewModel.cityName)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 32)
+                .padding(.leading, 16)
                 .font(.title)
             Text(mapViewModel.localTemperature)
                 .foregroundColor(.white)
-                .padding(.trailing, 32)
+                .padding(.trailing, 16)
                 .font(.title)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MapView()
     }
 }
