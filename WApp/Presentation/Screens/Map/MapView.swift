@@ -19,17 +19,9 @@ struct MapView: View {
                     .disabled(true)
                     .frame(width: 320, height: 500)
                     .cornerRadius(12)
-                locationButton
-                    .cornerRadius(12)
-                    .padding()
-                    .tint(AppColor.background)
-                    .foregroundColor(.white)
             }
         }
-    }
-
-    private var locationButton: some View {
-        LocationButton {
+        .onAppear {
             mapViewModel.requestLocation()
             mapViewModel.fetchWeather()
         }

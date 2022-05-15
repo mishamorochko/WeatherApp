@@ -61,8 +61,8 @@ extension MapViewModel: CLLocationManagerDelegate {
         userLocationRegion = MKCoordinateRegion(
             center: location,
             span: MKCoordinateSpan(
-                latitudeDelta: 0.5,
-                longitudeDelta: 0.5
+                latitudeDelta: 0.3,
+                longitudeDelta: 0.3
             )
         )
     }
